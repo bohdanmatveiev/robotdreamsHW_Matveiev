@@ -1,0 +1,64 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Simple Freestyle Job
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Simple Freestyle Job/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/bohdanmatveiev/gs-spring-boot # timeout=10
+Fetching upstream changes from https://github.com/bohdanmatveiev/gs-spring-boot
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/bohdanmatveiev/gs-spring-boot +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 58e2defecd683770f65f5b12bd9065ad9e92de05 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 58e2defecd683770f65f5b12bd9065ad9e92de05 # timeout=10
+Commit message: "Polishing"
+ > git rev-list --no-walk 58e2defecd683770f65f5b12bd9065ad9e92de05 # timeout=10
+[Simple Freestyle Job] $ mvn -f initial/pom.xml clean install
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36mcom.example:spring-boot-initial[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding spring-boot-initial 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclean:3.4.1:clean[m [1m(default-clean)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/jenkins_home/workspace/Simple Freestyle Job/initial/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/Simple Freestyle Job/initial/src/main/resources
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/Simple Freestyle Job/initial/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.14.0:compile[m [1m(default-compile)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 2 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/Simple Freestyle Job/initial/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.14.0:testCompile[m [1m(default-testCompile)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msurefire:3.5.4:test[m [1m(default-test)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjar:3.4.2:jar[m [1m(default-jar)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] Building jar: /var/jenkins_home/workspace/Simple Freestyle Job/initial/target/spring-boot-initial-0.0.1-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot:3.5.6:repackage[m [1m(repackage)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact /var/jenkins_home/workspace/Simple Freestyle Job/initial/target/spring-boot-initial-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[[1;34mINFO[m] The original artifact has been renamed to /var/jenkins_home/workspace/Simple Freestyle Job/initial/target/spring-boot-initial-0.0.1-SNAPSHOT.jar.original
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32minstall:3.1.4:install[m [1m(default-install)[m @ [36mspring-boot-initial[0;1m ---[m
+[[1;34mINFO[m] Installing /var/jenkins_home/workspace/Simple Freestyle Job/initial/pom.xml to /var/jenkins_home/.m2/repository/com/example/spring-boot-initial/0.0.1-SNAPSHOT/spring-boot-initial-0.0.1-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /var/jenkins_home/workspace/Simple Freestyle Job/initial/target/spring-boot-initial-0.0.1-SNAPSHOT.jar to /var/jenkins_home/.m2/repository/com/example/spring-boot-initial/0.0.1-SNAPSHOT/spring-boot-initial-0.0.1-SNAPSHOT.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  3.982 s
+[[1;34mINFO[m] Finished at: 2025-12-04T19:05:27Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Archiving artifacts
+Finished: SUCCESS
