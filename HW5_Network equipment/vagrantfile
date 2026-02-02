@@ -1,0 +1,31 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"  # Ubuntu 22.04 LTS
+
+  # VM 1: Сервер (Машина A)
+  config.vm.define "server" do |server|
+    server.vm.hostname = "server"
+    server.vm.network "private_network", ip: "192.168.56.10"  # Локальна мережа
+    server.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"  # 1 GB RAM
+      vb.cpus = 1
+    end
+    server.vm.provision "shell", inline: <<-SHELL
+      sudo apt update
+      sudo apt install -y netcat-openbsd ufw
+    SHELL
+  end
+
+  # VM 2: Клієнт (Машина B)
+  config.vm.define "client" do |client|
+    client.vm.hostname = "client"
+    client.vm.network "private_network", ip: "192.168.56.20"  # Та ж мережа
+    client.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"  # 1 GB RAM
+      vb.cpus = 1
+    end
+    client.vm.provision "shell", inline: <<-SHELL
+      sudo apt update
+      sudo apt install -y netcat-openbsd ufw
+    SHELL
+  end
+end
