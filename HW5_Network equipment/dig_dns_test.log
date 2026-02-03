@@ -1,0 +1,21 @@
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @192.168.56.10 mytest.local
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS 
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36719
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1       
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;mytest.local.                  IN      A
+
+;; ANSWER SECTION:
+mytest.local.           0       IN      A       192.168.56.10
+
+;; Query time: 4 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Tue Feb 03 12:40:24 UTC 2026
+;; MSG SIZE  rcvd: 57
