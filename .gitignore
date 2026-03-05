@@ -1,0 +1,5 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl   # іноді теж великий, але зазвичай OK
+*.tfstate
+*.tfstate.backup
