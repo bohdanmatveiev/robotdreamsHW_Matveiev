@@ -1,0 +1,24 @@
+# Базові пакети для встановлення
+baseline_packages:
+  - vim
+  - git
+  - mc
+  - ufw
+  - curl
+  - wget
+  - htop
+  - unzip
+  - python3-pip
+
+# SSH налаштування
+baseline_ssh_port: 22
+baseline_ssh_permit_root_login: "no"
+baseline_ssh_password_authentication: "no"
+baseline_ssh_pubkey_authentication: "yes"
+
+# Системний користувач
+baseline_admin_user: "ubuntu"
+baseline_admin_group: "sudo"
+
+# SSH ключі (список публічних ключів)
+baseline_ssh_public_keys: []

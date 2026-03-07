@@ -1,0 +1,9 @@
+vault_pass.txt
+*.retry
+.vault_pass
+*.pem
+*.key
+.env
+__pycache__/
+*.pyc
+.DS_Store
